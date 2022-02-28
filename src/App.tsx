@@ -1,13 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Favorites from "./pages/Favorites/Favorites";
+import Home from "./pages/Home/Home";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      hello ts
-    </div>
-  );
+    <Routes>
+      <Route path="/home" element={<Home />} />
+      <Route path="/favorites" element={<Favorites />} />
+      <Route path="/" element={<Navigate to="/home" />} />{/*redirect to home*/}
+    </Routes>
+  )
 }
 
 export default App;
