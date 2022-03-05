@@ -1,4 +1,5 @@
 import axios from "axios";
+import styles from './Home.module.scss'
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
   
   getData()
 
-  return <div>home</div>;
+  return <div className={styles.test} >home</div>;
 };
 
 export default Home;
